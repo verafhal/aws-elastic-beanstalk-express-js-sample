@@ -1,10 +1,11 @@
-This is my first AWS CI/CD pipeline!const express = require('express');
+const express = require('express');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => res.send('This is my first AWS CI/CD pipeline!'));
+app.get('/', function (req, res) {
+  res.send('This is my first AWS CI/CD pipeline!');
+});
 
-app.listen(port);
-console.log(`App running on http://localhost:${port}`);
-
-// trigger build
+app.listen(port, function () {
+  console.log(`App listening on port ${port}`);
+});
