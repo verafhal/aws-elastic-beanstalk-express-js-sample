@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ubuntu/myapp
-nohup npm start > output.log 2>&1 &
+pm2 start app.js --name "myapp"
