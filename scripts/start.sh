@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/ubuntu/myapp
-npm start
+nohup npm start > output.log 2>&1 &
